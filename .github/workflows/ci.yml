@@ -1,0 +1,46 @@
+name: Verify calculator
+on: [push, pull_request, workflow_dispatch]
+permissions:
+  contents: read
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - run: npm run check
+      - name: Verify deterministic build
+        run: |
+          cp index.html /tmp/first-build.html
+          npm run build
+          cmp index.html /tmp/first-build.html
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install browser test tools
+        run: |
+          python -m pip install playwright==1.57.0
+          python -m playwright install --with-deps chromium
+      - name: Run real-origin browser integration tests
+        run: |
+          node scripts/serve.mjs > /tmp/margin-shop-server.log 2>&1 &
+          python - <<'PY'
+          import time, urllib.request
+          for attempt in range(30):
+              try:
+                  urllib.request.urlopen('http://127.0.0.1:4173', timeout=1)
+                  break
+              except OSError:
+                  time.sleep(0.2)
+          else:
+              raise SystemExit('Preview server did not start')
+          PY
+          npm run test:e2e
+      - uses: actions/upload-artifact@v4
+        with:
+          name: margin-shop-standalone
+          path: dist/index.html
+          if-no-files-found: error

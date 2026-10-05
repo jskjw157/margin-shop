@@ -1,0 +1,11 @@
+node_modules/
+dist/
+.worktrees/
+.superpowers/
+__pycache__/
+*.pyc
+.env
+.env.*
+.DS_Store
+
+/index.html
