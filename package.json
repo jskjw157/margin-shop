@@ -1,0 +1,17 @@
+{
+  "name": "margin-shop",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Offline-capable clothing sourcing cost and selling-price calculator",
+  "type": "module",
+  "engines": { "node": ">=22" },
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "dev": "node scripts/build.mjs && node scripts/serve.mjs",
+    "preview": "node scripts/serve.mjs",
+    "test": "node --test tests/*.test.mjs",
+    "test:e2e": "python e2e/check.py",
+    "test:dom": "python e2e/dom_check.py",
+    "check": "npm test && npm run build"
+  }
+}

@@ -1,0 +1,12 @@
+import test from 'node:test';
+import assert from 'node:assert/strict';
+import { DEFAULTS } from '../src/calculator.mjs';
+import { STORAGE_KEY, loadSettings, saveSettings } from '../src/storage.mjs';
+const store = (value=null) => ({ getItem:()=>value, setItem:(_k,v)=>{value=v;}, removeItem:()=>{value=null;} });
+test('missing storage uses fresh defaults',()=>assert.deepEqual(loadSettings(store()).state,DEFAULTS));
+test('round trip saves only calculator settings and schema version',()=>{ const st=store(); assert.equal(saveSettings(st,{...DEFAULTS,sourcing:1234}),true); assert.equal(loadSettings(st).state.sourcing,1234); assert.equal(JSON.parse(st.getItem(STORAGE_KEY)).version,1); });
+test('bad JSON recovers without crashing',()=>{const r=loadSettings(store('{')); assert.deepEqual(r.state,DEFAULTS); assert.equal(r.status,'recovered');});
+test('wrong schema version is ignored',()=>assert.deepEqual(loadSettings(store('{"version":99,"settings":{"sourcing":999}}')).state,DEFAULTS));
+test('unknown keys and unsafe numeric fields are ignored',()=>{ const r=loadSettings(store(JSON.stringify({version:1,settings:{...DEFAULTS,sourcing:-3,feeRate:999,platform:'evil',includeVat:'false',injected:'<script>'}}))); assert.equal(r.state.sourcing,500); assert.equal(r.state.feeRate,5.8); assert.equal(r.state.includeVat,true); assert.equal(r.state.injected,undefined); });
+test('blocked reads and writes stay usable and report unavailable',()=>{const st={getItem(){throw Error('blocked');},setItem(){throw Error('quota');}}; assert.equal(loadSettings(st).status,'unavailable'); assert.equal(saveSettings(st,DEFAULTS),false);});
+test('mismatched persisted preset becomes custom',()=>{const st=store(JSON.stringify({version:1,settings:{...DEFAULTS,feeRate:8}})); assert.equal(loadSettings(st).state.platform,'custom');});

@@ -1,0 +1,146 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>의류 사입 마진 계산기 · 적정 판매가와 순이익 | Margin Shop</title>
+<meta name="description" content="동대문 의류 사입 원가부터 스마트스토어·에이블리·지그재그·쿠팡 수수료, 부가세, 배송비까지. 배수·목표 마진·판매가로 계산하는 무료 셀러 마진 계산기.">
+<meta name="theme-color" content="#155c45"><meta name="robots" content="index,follow">
+<meta property="og:type" content="website"><meta property="og:locale" content="ko_KR"><meta property="og:title" content="Margin Shop | 잘 남는 가격의 시작"><meta property="og:description" content="사입부터 배송까지. 숨어 있는 비용을 빼고 진짜 마진을 확인하세요.">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 48 48'%3E%3Crect width='48' height='48' rx='13' fill='%23155c45'/%3E%3Cpath d='M13 32V22m11 10V15m11 17V10' stroke='white' stroke-width='4' stroke-linecap='round'/%3E%3C/svg%3E">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"Margin Shop 의류 사입 마진 계산기","applicationCategory":"BusinessApplication","operatingSystem":"Any","inLanguage":"ko","isAccessibleForFree":true,"offers":{"@type":"Offer","price":"0","priceCurrency":"KRW"},"description":"의류 셀러를 위한 사입원가, 플랫폼 수수료, 부가세 추정 및 판매가 계산기"}</script>
+<!-- APP_STYLES -->
+</head>
+<body>
+<a class="skip-link" href="#calculator">계산기로 바로가기</a>
+<svg xmlns="http://www.w3.org/2000/svg" class="svg-sprite" aria-hidden="true"><defs>
+<symbol id="i-logo" viewBox="0 0 24 24"><path d="M4 17V7a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2Z"/><path d="M8 14v1m4-4v4m4-7v7"/></symbol>
+<symbol id="i-bag" viewBox="0 0 24 24"><path d="M5 7h14l1 13H4L5 7Z"/><path d="M9 8V6a3 3 0 0 1 6 0v2"/></symbol>
+<symbol id="i-truck" viewBox="0 0 24 24"><path d="M3 6h11v11H3zM14 10h4l3 4v3h-7"/><circle cx="7" cy="18" r="2"/><circle cx="17" cy="18" r="2"/></symbol>
+<symbol id="i-target" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8"/><circle cx="12" cy="12" r="4"/><path d="m12 12 9-9m-4 0h4v4"/></symbol>
+<symbol id="i-copy" viewBox="0 0 24 24"><rect x="8" y="8" width="12" height="13" rx="2"/><path d="M15 8V5a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h3"/></symbol>
+<symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14m-5-5 5 5-5 5"/></symbol>
+<symbol id="i-reset" viewBox="0 0 24 24"><path d="M3 10a9 9 0 1 1 1 7M3 4v6h6"/></symbol>
+<symbol id="i-check" viewBox="0 0 24 24"><path d="m5 12 4 4L19 6"/></symbol>
+<symbol id="i-lock" viewBox="0 0 24 24"><rect x="5" y="10" width="14" height="11" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3m-4 4v3"/></symbol>
+<symbol id="i-book" viewBox="0 0 24 24"><path d="M12 5v15M3 4c4-1 7 0 9 2 2-2 5-3 9-2v15c-4-1-7 0-9 2-2-2-5-3-9-2V4Z"/></symbol>
+<symbol id="i-sliders" viewBox="0 0 24 24"><path d="M4 7h7m4 0h5M4 17h3m4 0h9"/><circle cx="13" cy="7" r="2"/><circle cx="9" cy="17" r="2"/></symbol>
+<symbol id="i-info" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 11v6m0-10v1"/></symbol>
+<symbol id="i-chevron" viewBox="0 0 24 24"><path d="m8 10 4 4 4-4"/></symbol>
+<symbol id="i-close" viewBox="0 0 24 24"><path d="m6 6 12 12M6 18 18 6"/></symbol>
+</defs></svg>
+<header class="site-header"><div class="header-inner flex items-center justify-between">
+<a href="#" class="brand" aria-label="Margin Shop 홈"><span class="brand-icon"><svg class="icon " aria-hidden="true"><use href="#i-logo"></use></svg></span><span>margin<span class="brand-light">shop</span><span class="brand-dot">.</span></span></a>
+<nav aria-label="주요 메뉴" class="top-nav"><a class="active" href="#calculator">마진 계산기</a><a href="#guide">셀러 가이드</a></nav>
+<div class="privacy-pill"><svg class="icon " aria-hidden="true"><use href="#i-lock"></use></svg><span>내 브라우저에만 안전하게</span></div>
+</div></header>
+<main class="page-shell">
+<section class="intro" aria-labelledby="page-title">
+<div><p class="eyebrow"><span class="tiny-dot"></span> LESS GUESSWORK, MORE MARGIN</p><h1 id="page-title">의류 사입 마진 계산기<span class="heading-dot">.</span></h1><p class="intro-description">사입부터 배송까지, 숨어 있는 비용을 빼고<br class="mobile-br"> <strong>진짜 남는 금액</strong>을 확인하세요.</p></div>
+<div class="intro-aside"><span class="intro-small">동대문 의류 사입 &amp; 플랫폼별 적정 판매가 계산기</span><span class="intro-features"><svg class="icon " aria-hidden="true"><use href="#i-check"></use></svg> 로그인 없이 무료 <span>·</span> 입력 즉시 계산</span></div>
+</section>
+<div id="calculator" class="workspace">
+<section class="inputs-column" aria-label="원가 및 판매 설정">
+<div class="column-heading flex items-center justify-between"><h2>내 상품의 비용 입력</h2><button type="button" id="reset-button" class="text-button"><svg class="icon " aria-hidden="true"><use href="#i-reset"></use></svg> 초기화</button></div>
+<form id="calculator-form" novalidate autocomplete="off">
+<section class="panel input-panel" aria-labelledby="purchase-title">
+<div class="panel-heading"><span class="step-number">01</span><h3 id="purchase-title">사입 및 매입 원가</h3><span class="heading-icon"><svg class="icon " aria-hidden="true"><use href="#i-bag"></use></svg></span></div>
+<div class="grid sm:grid-cols-2 gap-4">
+<div class="field"><label for="wholesale">도매 사입가</label><div class="input-shell"><input id="wholesale" data-field="wholesale"  type="text" inputmode="numeric" autocomplete="off" spellcheck="false" value="15,000" aria-describedby="hint-wholesale err-wholesale" maxlength="18"><span class="input-unit">원</span></div><p class="field-hint" id="hint-wholesale">거래처에서 안내받은 상품 1개 가격</p><p class="field-error" id="err-wholesale" hidden></p></div>
+<div class="field"><label for="sourcing">사입 삼촌비 · 건당 배분</label><div class="input-shell"><input id="sourcing" data-field="sourcing"  type="text" inputmode="numeric" autocomplete="off" spellcheck="false" value="500" aria-describedby="hint-sourcing err-sourcing" maxlength="18"><span class="input-unit">원</span></div><p class="field-hint" id="hint-sourcing">총 사입비 ÷ 예상 판매 수량</p><p class="field-error" id="err-sourcing" hidden></p></div>
+</div>
+<div class="purchase-bottom"><label class="check-row" for="vatExclusive"><input id="vatExclusive" data-field="vatExclusive" type="checkbox" checked><span>도매가 부가세 별도 <span class="muted">(+10%)</span></span></label><span class="mini-total">실제 매입금액 <strong id="wholesale-total">16,500원</strong></span></div>
+</section>
+<section class="panel input-panel" aria-labelledby="logistics-title">
+<div class="panel-heading"><span class="step-number">02</span><h3 id="logistics-title">부자재 및 배송비</h3><span class="heading-icon"><svg class="icon " aria-hidden="true"><use href="#i-truck"></use></svg></span></div>
+<div class="grid sm:grid-cols-2 gap-4">
+<div class="field"><label for="packaging">부자재 단가</label><div class="input-shell"><input id="packaging" data-field="packaging"  type="text" inputmode="numeric" autocomplete="off" spellcheck="false" value="400" aria-describedby="hint-packaging err-packaging" maxlength="18"><span class="input-unit">원</span></div><p class="field-hint" id="hint-packaging">폴리백 · 행택 · 스티커 · 박스 합산</p><p class="field-error" id="err-packaging" hidden></p></div>
+<div class="field"><label for="courier">출고 택배비</label><div class="input-shell"><input id="courier" data-field="courier"  type="text" inputmode="numeric" autocomplete="off" spellcheck="false" value="2,800" aria-describedby="hint-courier err-courier" maxlength="18"><span class="input-unit">원</span></div><p class="field-hint" id="hint-courier">택배사와 계약한 실제 발송 비용</p><p class="field-error" id="err-courier" hidden></p></div>
+</div>
+<div class="shipping-row">
+<fieldset class="delivery-setting"><legend>배송비 설정</legend><div class="segmented shipping-segments"><label for="shipping-paid"><input id="shipping-paid" name="delivery" value="paid" type="radio" checked><span>고객 부담</span></label><label for="shipping-free"><input id="shipping-free" name="delivery" value="free" type="radio"><span>무료배송</span></label></div></fieldset>
+<div class="field"><label for="shippingIncome">고객 부담 배송비</label><div class="input-shell"><input id="shippingIncome" data-field="shippingIncome"  type="text" inputmode="numeric" autocomplete="off" spellcheck="false" value="3,000" aria-describedby="hint-shippingIncome err-shippingIncome" maxlength="18"><span class="input-unit">원</span></div><p class="field-hint" id="hint-shippingIncome">고객에게 받는 배송비 수입</p><p class="field-error" id="err-shippingIncome" hidden></p></div>
+</div>
+<p class="inline-tip"><svg class="icon " aria-hidden="true"><use href="#i-info"></use></svg><span>배송비 차액도 수익에 반영돼요. <strong id="shipping-difference">고객 배송비 − 출고비 = +200원</strong></span></p>
+</section>
+<section class="panel input-panel" aria-labelledby="pricing-title">
+<div class="panel-heading"><span class="step-number">03</span><h3 id="pricing-title">플랫폼과 목표 마진</h3><span class="heading-icon"><svg class="icon " aria-hidden="true"><use href="#i-target"></use></svg></span></div>
+<div class="platform-fields">
+<div class="field"><label for="platform">판매 플랫폼</label><div class="select-shell"><span id="platform-symbol" class="platform-symbol" aria-hidden="true">N</span><select id="platform" data-field="platform"><option value="smartstore">스마트스토어</option><option value="ably">에이블리</option><option value="zigzag">지그재그</option><option value="coupang">쿠팡 윙</option><option value="custom">직접 입력</option></select><svg class="icon " aria-hidden="true"><use href="#i-chevron"></use></svg></div><p class="field-hint">플랫폼 선택 시 예시 요율 자동 입력</p></div>
+<div class="field"><label for="feeRate">수수료율</label><div class="input-shell"><input id="feeRate" data-field="feeRate" data-decimal="true" type="text" inputmode="decimal" autocomplete="off" spellcheck="false" value="5.8" aria-describedby="hint-feeRate err-feeRate" maxlength="18"><span class="input-unit">%</span></div><p class="field-hint" id="hint-feeRate">부가세 포함 실부담 요율</p><p class="field-error" id="err-feeRate" hidden></p></div>
+</div>
+<p class="preset-disclaimer">* 요청된 예시 요율입니다. 실제 계약·카테고리·프로모션에 맞게 수정하세요.</p>
+<fieldset class="pricing-method"><legend>판매가를 어떻게 정할까요?</legend><div class="segmented mode-segments">
+<label for="mode-multiplier"><input id="mode-multiplier" name="mode" data-field="mode" value="multiplier" type="radio" checked><span>원하는 배수</span></label>
+<label for="mode-margin"><input id="mode-margin" name="mode" data-field="mode" value="margin" type="radio"><span>목표 마진율</span></label>
+<label for="mode-direct"><input id="mode-direct" name="mode" data-field="mode" value="direct" type="radio"><span>판매가 직접 입력</span></label>
+</div></fieldset>
+<div class="mode-panel" data-mode-panel="multiplier"><div class="field"><label for="multiplier">원하는 판매 배수</label><div class="input-shell"><input id="multiplier" data-field="multiplier" data-decimal="true" type="text" inputmode="decimal" autocomplete="off" spellcheck="false" value="2.5" aria-describedby="hint-multiplier err-multiplier" maxlength="18"><span class="input-unit">배</span></div><p class="field-hint" id="hint-multiplier">부가세 제외 도매 공급가 × 배수</p><p class="field-error" id="err-multiplier" hidden></p></div><div class="quick-presets" aria-label="배수 빠른 선택"><button type="button" data-multiple="2.2">2.2배</button><button type="button" data-multiple="2.5" aria-pressed="true">2.5배</button><button type="button" data-multiple="3">3.0배</button></div></div>
+<div class="mode-panel" data-mode-panel="margin" hidden><div class="field"><label for="targetMargin">목표 순마진율</label><div class="input-shell"><input id="targetMargin" data-field="targetMargin" data-decimal="true" type="text" inputmode="decimal" autocomplete="off" spellcheck="false" value="30" aria-describedby="hint-targetMargin err-targetMargin" maxlength="18"><span class="input-unit">%</span></div><p class="field-hint" id="hint-targetMargin">플랫폼 수수료와 선택한 부가세 추정분까지 차감</p><p class="field-error" id="err-targetMargin" hidden></p></div><p class="mode-explanation">원하는 마진이 남도록 필요한 판매가를 역산해요.</p></div>
+<div class="mode-panel" data-mode-panel="direct" hidden><div class="field"><label for="directPrice">최종 판매가</label><div class="input-shell"><input id="directPrice" data-field="directPrice"  type="text" inputmode="numeric" autocomplete="off" spellcheck="false" value="38,900" aria-describedby="hint-directPrice err-directPrice" maxlength="18"><span class="input-unit">원</span></div><p class="field-hint" id="hint-directPrice">고객에게 보여줄 부가세 포함 상품 가격</p><p class="field-error" id="err-directPrice" hidden></p></div><p class="mode-explanation">입력한 가격 그대로 계산해요. 끝자리 정리는 적용하지 않아요.</p></div>
+<details class="advanced-settings"><summary><svg class="icon " aria-hidden="true"><use href="#i-sliders"></use></svg> 세금·수수료 상세 설정 <svg class="icon details-chevron" aria-hidden="true"><use href="#i-chevron"></use></svg></summary><div class="advanced-body">
+<label class="check-row" for="includeVat"><input id="includeVat" data-field="includeVat" type="checkbox" checked><span>부가세 추정분 차감<small>일반과세자 단순 추정. 끄면 부가세 차감 전 비교 결과입니다.</small></span></label>
+<label class="check-row" for="purchaseCredit"><input id="purchaseCredit" data-field="purchaseCredit" type="checkbox" checked><span>도매 매입세액 공제 반영<small>공제 요건을 갖춘 적격증빙을 받는 경우에만 선택하세요.</small></span></label>
+<label class="check-row" for="otherCredit"><input id="otherCredit" data-field="otherCredit" type="checkbox" ><span>기타 비용의 매입세액 공제 반영<small>삼촌비·부자재·택배·수수료 모두 VAT 포함이며 공제 가능할 때만 선택하세요.</small></span></label>
+<label class="check-row" for="feeOnShipping"><input id="feeOnShipping" data-field="feeOnShipping" type="checkbox" ><span>고객 배송비에도 동일 수수료율 적용<small>배송비 수수료 정책은 플랫폼별 계약을 확인하세요.</small></span></label>
+</div></details>
+</section>
+</form>
+<div class="storage-line"><svg class="icon " aria-hidden="true"><use href="#i-check"></use></svg><span id="storage-status">입력한 설정은 이 브라우저에 자동 저장돼요.</span></div>
+</section>
+<aside id="results" class="results-column" aria-labelledby="results-title">
+<div class="column-heading flex items-center justify-between"><h2 id="results-title">실시간 계산 결과</h2><span class="live-badge"><span class="tiny-dot"></span> LIVE</span></div>
+<div class="result-stack">
+<section class="price-card" aria-label="권장 판매가">
+<div class="price-card-top"><span id="price-caption">권장 소비자 판매가</span><span class="price-badge" id="market-badge">스마트스토어</span></div>
+<div class="price-line"><span id="price-value">37,900</span><span class="price-unit">원</span></div>
+<p class="price-context" id="price-context">부가세 포함 · 고객 배송비 별도</p>
+<div class="price-card-bottom"><span id="multiple-summary">도매 공급가 대비 <strong>2.53배</strong></span><span class="price-decoration" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></span></div>
+</section>
+<section class="rounding-card panel" aria-label="판매가 끝자리 정리"><div class="rounding-head"><span>판매가 끝자리 정리</span><fieldset id="rounding-options" class="segmented small-segments"><legend class="sr-only">반올림 단위</legend><label for="round-100"><input type="radio" name="roundUnit" id="round-100" data-field="roundUnit" value="100" checked><span>100원</span></label><label for="round-1000"><input type="radio" name="roundUnit" id="round-1000" data-field="roundUnit" value="1000"><span>1,000원</span></label></fieldset></div><div class="rounding-bottom"><label class="switch-row" for="ending900"><input type="checkbox" id="ending900" data-field="ending900" checked><span class="switch-track" aria-hidden="true"></span><span>끝자리 <strong>900원</strong>으로</span></label><span id="rounding-hint">가장 가까운 900원 끝자리</span></div></section>
+<div id="result-error" class="result-error" role="alert" hidden></div>
+<div class="metric-grid grid grid-cols-2 gap-3">
+<section class="metric-card panel"><h3>건당 순이익 <span class="metric-estimate">추정</span></h3><p class="metric-number"><span id="profit-value">16,284</span><span>원</span></p><p class="metric-description" id="profit-description">비용과 부가세를 빼고 남는 금액</p></section>
+<section class="metric-card panel"><h3>최종 순마진율</h3><p class="metric-number"><span id="margin-value">43.0</span><span>%</span></p><p class="metric-description">최종 판매가 대비 순이익</p></section>
+</div>
+<div id="result-warnings" class="result-warnings" role="status" hidden></div>
+<section class="panel costs-panel" aria-labelledby="cost-title">
+<div class="cost-title-row"><h3 id="cost-title">한눈에 보는 비용 구조</h3><button id="formula-button" type="button" class="icon-button" aria-label="계산 기준 보기"><svg class="icon " aria-hidden="true"><use href="#i-info"></use></svg></button></div>
+<p id="graph-basis" class="graph-basis">고객 총 결제금액 기준 · 배송비 포함</p>
+<div id="cost-bar" class="cost-bar" role="img" aria-label="비용 구조"></div>
+<div id="chart-legend" class="chart-legend"></div>
+<dl class="cost-breakdown">
+<div><dt><span class="cost-dot cost-wholesale"></span>도매 매입원가 <small>VAT 포함</small></dt><dd id="cost-wholesale">16,500원</dd></div>
+<div><dt><span class="cost-dot cost-fee"></span>플랫폼 수수료 <small id="fee-description">5.8%</small></dt><dd id="cost-fee">2,198원</dd></div>
+<div><dt><span class="cost-dot cost-logistics"></span>삼촌비·부자재·출고비</dt><dd id="cost-logistics">3,700원</dd></div>
+<div><dt><span class="cost-dot cost-vat"></span>부가세 추정분</dt><dd id="cost-vat">2,218원</dd></div>
+<div class="total-row"><dt>총 비용</dt><dd id="total-cost">24,616원</dd></div>
+</dl>
+<div class="break-even"><span><svg class="icon " aria-hidden="true"><use href="#i-target"></use></svg> 손익분기 판매가</span><strong id="break-even">18,768원</strong></div>
+<p class="precision-note">계산은 소수점으로, 표시는 원 단위 반올림해요.</p>
+</section>
+<button id="copy-button" type="button" class="primary-button"><svg class="icon " aria-hidden="true"><use href="#i-copy"></use></svg> 판매가 및 원가 요약 복사 <svg class="icon copy-arrow" aria-hidden="true"><use href="#i-arrow"></use></svg></button>
+<p class="copy-caption">셀러 노트에 바로, 엑셀에는 항목별로 붙여넣기.</p>
+<p class="result-footnote" id="tax-summary">일반과세자 단순 추정 · 도매 매입세액 공제 반영<br>소득세·광고비·쿠폰·반품비·고정비는 포함하지 않습니다.</p>
+</div>
+</aside>
+</div>
+<section id="guide" class="seller-guide" aria-labelledby="guide-title"><div class="guide-header"><div><p class="eyebrow">SELLER’S NOTE</p><h2 id="guide-title">작은 비용까지 챙기는 셀러를 위해</h2><p>가격을 정하기 전, 이 세 가지만 기억하세요.</p></div><span class="guide-icon"><svg class="icon " aria-hidden="true"><use href="#i-book"></use></svg></span></div>
+<div class="guide-grid">
+<article class="guide-card"><span class="guide-number">01 / TAX</span><h3>도매 부가세, 증빙까지 챙기기</h3><p>도매가가 부가세 별도라면 실제 결제액은 10% 늘어나요. 일반과세자의 매입세액 공제는 적격증빙과 공제 요건이 필요해요. 증빙을 받지 못했다면 공제 옵션을 꺼서 비교하세요.</p><a href="https://www.nts.go.kr/nts/cm/cntnts/cntntsView.do?cntntsId=7696&amp;mi=2274" target="_blank" rel="noopener noreferrer">국세청 계산 기준 확인 <svg class="icon " aria-hidden="true"><use href="#i-arrow"></use></svg></a></article>
+<article class="guide-card"><span class="guide-number">02 / SOURCING</span><h3>삼촌비는 ‘한 건당’으로 나누기</h3><p>사입 삼촌비를 매입 수량이 아닌 예상 판매 수량으로 나누면 판매 건당 비용을 보수적으로 볼 수 있어요. 예를 들어 총 사입비 25,000원, 예상 판매 50건이면 건당 500원이에요.</p><span class="guide-formula">25,000원 ÷ 50건 = <strong>500원 / 건</strong></span></article>
+<article class="guide-card"><span class="guide-number">03 / MARGIN</span><h3>높은 배수가 높은 마진은 아니에요</h3><p>같은 2.5배수라도 플랫폼 수수료와 무료배송 여부에 따라 남는 금액은 달라져요. 반올림 후 실제 마진을 확인하고, 광고·쿠폰·반품·인건비를 위한 여유도 남겨두세요.</p><span class="guide-formula">순마진율 = 순이익 ÷ 판매가 × 100</span></article>
+</div>
+<details class="guide-faq"><summary>이 계산기의 ‘순이익’은 실제 통장에 남는 금액과 같나요? <svg class="icon " aria-hidden="true"><use href="#i-chevron"></use></svg></summary><p>아니요. 입력한 상품 1건의 비용과 선택한 부가세 추정분만 차감한 예상 기여이익이에요. 소득세·법인세, 임차료·인건비 등 고정비, 광고비, 할인 쿠폰, 반품·교환·재고 손실은 반영하지 않습니다. 간이과세자 세액도 계산하지 않으며, 정확한 세금은 세무 전문가에게 확인하세요.</p></details>
+</section>
+</main>
+<footer class="site-footer"><div class="footer-inner"><span class="footer-brand">marginshop<span>.</span></span><p>감이 아닌 숫자로, 더 단단한 셀러의 시작.</p><div><button type="button" id="privacy-button">개인정보 안내</button><span>© 2026 Margin Shop</span></div></div><p class="footer-disclaimer">수수료는 예시이며 최신 공식 요율을 보장하지 않습니다. 본 계산 결과는 사업 의사결정을 위한 참고용입니다.</p></footer>
+<a href="#results" class="mobile-result-link"><span>권장 판매가 <strong id="mobile-price">37,900원</strong></span><span>결과 보기 <svg class="icon " aria-hidden="true"><use href="#i-arrow"></use></svg></span></a>
+<div class="sr-only" aria-live="polite" aria-atomic="true" id="live-summary"></div><div id="toast" class="toast" role="status" hidden></div>
+<dialog id="reset-dialog"><form method="dialog"><div class="dialog-heading"><h2>입력값을 초기화할까요?</h2><button class="icon-button" aria-label="닫기"><svg class="icon " aria-hidden="true"><use href="#i-close"></use></svg></button></div><p>이 계산기의 입력값만 기본 예시로 바뀝니다.<br>브라우저의 다른 데이터는 삭제하지 않아요.</p><div class="dialog-actions"><button id="reset-cancel" class="secondary-button">취소</button><button id="reset-confirm" type="button" class="primary-button">초기화</button></div></form></dialog>
+<dialog id="copy-dialog"><form method="dialog"><div class="dialog-heading"><h2>직접 복사해 주세요</h2><button class="icon-button" aria-label="닫기"><svg class="icon " aria-hidden="true"><use href="#i-close"></use></svg></button></div><p>브라우저에서 자동 복사를 허용하지 않았어요.<br>아래 내용을 선택해 복사하면 됩니다.</p><label for="copy-text" class="sr-only">판매가 및 원가 요약</label><textarea id="copy-text" readonly rows="14"></textarea><div class="dialog-actions"><button class="primary-button">닫기</button></div></form></dialog>
+<dialog id="formula-dialog"><form method="dialog"><div class="dialog-heading"><h2>숫자 뒤에 있는 계산 기준</h2><button class="icon-button" aria-label="닫기"><svg class="icon " aria-hidden="true"><use href="#i-close"></use></svg></button></div><div class="formula-content"><h3>건당 순이익</h3><p>상품 판매가 + 고객 배송비 − 도매 매입금액(VAT 포함) − 삼촌비 − 부자재비 − 출고 택배비 − 플랫폼 수수료 − 부가세 추정분</p><h3>부가세 추정분 · 일반과세자</h3><p>max(0, 고객 총 결제금액 ÷ 11 − 공제 가능한 매입세액). 도매 매입세액은 공제 옵션에 따라 반영하며, 기타 비용은 별도 선택 시에만 반영합니다. 환급 예상분은 건별 이익으로 더하지 않습니다.</p><h3>배수와 반올림</h3><p>배수는 부가세 제외 도매 공급가에 곱합니다. 100원/1,000원 또는 가장 가까운 ‘900원 끝자리’로 반올림합니다. 정리한 가격이 목표 마진에 못 미치면 경고와 목표 확보 가격을 안내합니다. 직접 입력한 판매가는 정리하지 않습니다.</p><h3>배송비와 수수료</h3><p>고객 배송비는 수입이며 매출세액 추정에 포함합니다. 그래프는 배송비 포함 총 결제액 기준입니다. 수수료율은 VAT 포함 실부담 요율이며, 배송비에도 같은 요율을 부과할지는 별도 선택합니다.</p><h3>범위와 한계</h3><p>금액 입력은 0~10억 원, 목표 마진은 0~99.99%, 배수는 0~100배입니다. 부가세를 끄면 세전 비교이며 간이과세 계산이 아닙니다. 소득세·광고·쿠폰·반품·고정비는 제외합니다. 이익과 비용의 원 단위 표시 합계에는 반올림 오차가 있을 수 있습니다.</p></div><div class="dialog-actions"><button class="primary-button">확인했어요</button></div></form></dialog>
+<dialog id="privacy-dialog"><form method="dialog"><div class="dialog-heading"><h2>입력값은 내 브라우저에만</h2><button class="icon-button" aria-label="닫기"><svg class="icon " aria-hidden="true"><use href="#i-close"></use></svg></button></div><p>계산기는 회원가입, 서버 전송, 추적 쿠키, 분석 도구, 광고 스크립트를 사용하지 않습니다. 입력한 설정만 현재 기기의 LocalStorage에 저장합니다.</p><p>공용 기기에서는 사용 후 초기화하세요. 시크릿 모드나 저장소 제한 환경에서는 설정이 유지되지 않을 수 있습니다. 국세청 링크를 직접 열면 해당 사이트의 개인정보 정책이 적용됩니다.</p><p>웹 호스팅 서비스는 자체 정책에 따라 접속 로그를 보관할 수 있습니다. 향후 광고·분석 도구 도입 시 이 안내와 필요한 동의 절차를 별도로 수정해야 합니다.</p><div class="dialog-actions"><button class="primary-button">확인했어요</button></div></form></dialog>
+<noscript><style>.workspace,.mobile-result-link{display:none!important}</style><div class="noscript-warning">계산기를 사용하려면 브라우저의 JavaScript를 켜 주세요. 아래 셀러 가이드는 그대로 읽을 수 있습니다.</div></noscript>
+<!-- APP_SCRIPT -->
+</body></html>
